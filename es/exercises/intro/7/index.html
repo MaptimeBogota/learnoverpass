@@ -1,0 +1,43 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us"><head><link href="http://gmpg.org/xfn/11" rel="profile"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><title>Por zona</title><link rel="stylesheet" href="//maptimebogota.github.io/learnoverpass//css/main.css"> <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png"><link href="/favicon.png" rel="icon"><link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'><link href="" rel="alternate" type="application/rss+xml" title="LearnOverpass &middot; "/><meta name="description" content=""><meta name="keywords" content=""> </head><body><div class="exercise-contrib"><div> <a href="https://github.com/maptimebogota/learnoverpass/blob/master/CONTRIB.md">Contribute to project</a></div></div> <div class="menu-bar"><h1> <a href="//maptimebogota.github.io/learnoverpass//">LearnOverpass</a></h1></div><div class="exercise-container"><div class="exercise-lesson"><div class="exercise-lesson-bar"><div class="line">Intro</div></div><div class="exercise-lesson-inner"><div class="exercise-lesson-article"><h2> Por zona  <a class="docs-improve" href="https://github.com/maptimebogota/learnoverpass/edit/master/content/es/exercises/intro/7.md">Improve page</a></h2> <p>&ldquo;¡Bingo!&rdquo; dice Bob mientras camina hacia el restaurante.</p>
+
+<p>¿Ves lo poderoso que es Overpass QL en la consulta de datos OSM? Tiene una plétora de diferentes filtros y declaraciones, y la combinación de ellos entre sí puede crear consultas aún más específicas para sus casos de uso.</p>
+
+<p>Nuestro ejemplo anterior introduce una metáfora muy importante en el Lenguaje de Consulta de Overpass, que es el &lsquo;flujo&rsquo;. Una buena manera de pensar en la API Overpass es que permite que los datos OSM (nodos, etc.) sean generados y modificados a medida que &lsquo;fluyen&rsquo; de una declaración a otra.</p>
+
+<p>Como ejemplo concreto, nuestra consulta de bounding box (los puntos lat/lon) encuentra los nodos de esa zona. Los datos resultantes &ldquo;fluirán&rdquo; y se filtrarán como <code>[natural=tree]</code>, <code>[height=20]</code>, etc.</p>
+
+<p>Si te fijas, <code>(around:n)</code> funciona de la misma manera, en el sentido de que nuestros datos iniciales fluyen en él, y se modifica para mostrar los nodos alrededor de los datos iniciales que se producen por nuestra primera línea.</p>
+
+<p>&ldquo;¡Vaya!&rdquo; exclama Bob, &ldquo;¡Ha sido una comida muy buena!&rdquo;.</p>
+
+<p>&ldquo;Serían 25 euros señor&rdquo; dice el camarero, vestido con un atuendo totalmente blanco.</p>
+
+<p>&ldquo;¡Ya voy!&rdquo; dice Bob orgulloso, cuando&hellip;</p>
+
+<p>&ldquo;¡Uh oh! Parece que me he dejado la cartera en el observatorio!&rdquo;.</p>
+
+<p>Nervioso, Bob salió corriendo del restaurante, con la esperanza de recuperar su cartera.</p>
+</div><div class="exercise-lesson-instruction"><div class="exercise-lesson-label"> <span>Instructions</span></div> <ol>
+<li>Bob se dejó la cartera mientras recorría la ciudad. Recordaba perfectamente haber dejado la cartera en cierta <strong>torre del observatorio</strong> en el <strong>río Inn</strong>.</li>
+<li>Ese observatorio está bastante lejos, así que sería mejor asegurarnos de que nuestra consulta resultante también muestra nuestra posición actual (¡para no perdernos!) Si te fijas en el editor de la derecha, tenemos dos sentencias <code>out</code>, con una línea en blanco entre ellas. Overpass QL puede usar múltiples sentencias <code>out</code>. Si piensas en las sentencias QL como <em>sentencias</em>, puedes pensar en nuestra estructura aquí como dos párrafos diferentes. Nuestro primer &lsquo;párrafo&rsquo; es la consulta que hemos estado utilizando hasta ahora, y sólo imprime el restaurante donde se encuentra Bob. El segundo &lsquo;párrafo&rsquo; es lo que necesitas editar.</li>
+<li>Necesitamos encontrar un nodo que sea una <em>torre de observación</em>. Para ello podemos utilizar el filtro <code>[&quot;tower:type&quot;=observation]</code>. Observa que entrecomillamos el tipo de filtro porque contiene un carácter no alfabético (<code>:</code>).</li>
+<li>Encontrar nodos de torres de observatorio es fácil, pero ¿cómo podemos limitar nuestros resultados observatorios en el río Inn? Utilizar un <em>bounding box</em> sería demasiado complicado. Lo que podemos optar por hacer es consultar por <code>área</code>. Como sabemos que la torre está en una zona concreta (el río Inn), podemos utilizar esa información para hacer nuestra consulta.</li>
+<li>Como puedes ver en el editor, la 5a. línea tiene la palabra clave <code>area</code>. Es igual que la palabra clave <code>node</code> que hemos utilizado hasta ahora, pero en lugar de buscar un único punto de interés como un nodo, &ldquo;área&rdquo; busca un&hellip; bueno, ¡un <em>área</em>!</li>
+<li>Sabemos que el nombre del río es <em>Inn</em>. Podemos utilizarlo como filtro para nuestra área. Sigue adelante y utiliza <code>[name=Inn]</code> como filtro en la sentencia <code>area</code>.</li>
+<li>En realidad no queremos consultar el área, sino que sólo queremos <em>utilizar</em> el área para encontrar un nodo concreto en ella. Así que en la sexta línea, escribe tu declación <code>nodo</code>, junto con el filtro de tipo torre discutido en 3.</li>
+<li>Una vez hecho esto, tenemos que asegurarnos de que el nodo sólo consulta dentro del área que hemos definido. Para ello, cambia la sentencia <code>node</code> por <code>node(area)</code>. Esto le dice a overpass que sólo busque nodos dentro del área definida en la sentencia area.</li>
+</ol>
+</div></div></div><div class="docs-repl exercise-main"><div class="editor-cover"></div> <textarea>node(48.5657094, 13.4490548, 48.5662416, 13.4501676)[natural=tree][height=20];
+node(around:150)[amenity=restaurant];
+out;
+
+area;
+out;
+</textarea><div class="exercise-fail-msg"><div class="message"> <span class="warning">That doesn't seem right!</span> <span class="hint">No olvides utilizar una consulta <code>area</code>.</span></div></div><div class="exercise-action-bar"><div class="exercise-action-bar-inner winner-bar"><div> <span>Awesome Work!</span> <a href="//maptimebogota.github.io/learnoverpass/es/exercises/intro/8/" class="exercise-action-next">Go to Next Lesson</a></div></div><div class="exercise-action-bar-inner"><div> <a href="#" class="exercise-action-run">Run Query</a> <a href="#" class="exercise-action-reset">Reset Code</a></div></div></div><div class="docs-repl-result output"><iframe src="https://overpass-turbo.eu/map.html?silent" seamless="seamless" frameBorder="0"></iframe><textarea></textarea> <a class="docs-repl-change-output button" href="#">Data</a></div></div><div class="exercise-answer">node(48.5657094, 13.4490548, 48.5662416, 13.4501676)[natural=tree][height=20];
+node(around:150)[amenity=restaurant];
+out;
+
+area[name=Inn];
+node(area)[&#34;tower:type&#34;=observation];
+out;
+</div><div class="exercise-regex"></div></div> <script src="//maptimebogota.github.io/learnoverpass//js/vendor.bundle.js"></script> <script src="//maptimebogota.github.io/learnoverpass//js/exercise.bundle.js"></script> </body></html>

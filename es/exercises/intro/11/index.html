@@ -1,0 +1,27 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us"><head><link href="http://gmpg.org/xfn/11" rel="profile"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><title>Modificadores Out</title><link rel="stylesheet" href="//maptimebogota.github.io/learnoverpass//css/main.css"> <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png"><link href="/favicon.png" rel="icon"><link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'><link href="" rel="alternate" type="application/rss+xml" title="LearnOverpass &middot; "/><meta name="description" content=""><meta name="keywords" content=""> </head><body><div class="exercise-contrib"><div> <a href="https://github.com/maptimebogota/learnoverpass/blob/master/CONTRIB.md">Contribute to project</a></div></div> <div class="menu-bar"><h1> <a href="//maptimebogota.github.io/learnoverpass//">LearnOverpass</a></h1></div><div class="exercise-container"><div class="exercise-lesson"><div class="exercise-lesson-bar"><div class="line">Intro</div></div><div class="exercise-lesson-inner"><div class="exercise-lesson-article"><h2> Modificadores Out  <a class="docs-improve" href="https://github.com/maptimebogota/learnoverpass/edit/master/content/es/exercises/intro/11.md">Improve page</a></h2> <p>¡Increíblemente buen trabajo!</p>
+
+<p>&ldquo;¡Gracias!&rdquo; Dijo Bob mientras se subía a su moto. &ldquo;¡Entonces seguiré este camino hasta el observatorio!&rdquo;.</p>
+
+<p>Los dos últimos ejercicios introdujeron bastantes cosas, en concreto, <code>way</code> y el modificador <code>out geom</code>.</p>
+
+<p>Un <code>way</code> es otro elemento OSM (como <code>node</code>) que describe una característica lineal o área. Por ahora, acepta que una &ldquo;vía&rdquo; también puede definir áreas. La información relevante que necesitamos aprender es que una &ldquo;vía&rdquo; se utiliza normalmente para definir carreteras, arroyos y autopistas, entre otras cosas. Si necesitas buscar una ruta, o algo que crees que no puede ser definido como un simple &ldquo;punto&rdquo;, lo más probable es que sea un elemento &ldquo;camino&rdquo;.</p>
+
+<p>En OSM, las vías se representan simplemente como un conjunto de puntos. Si lo piensas, podemos usar un par de puntos para definir una línea (que puede usarse para definir rutas).</p>
+
+<p>Dado que las vías se representan internamente como un conjunto de puntos, una vía es en realidad una lista ordenada de nodos. Impresionante, ¿verdad? Debido a esto, podemos consultar los nodos individuales de una vía, aunque no es algo que vayamos a hacer por ahora.</p>
+
+<p>Te habrás dado cuenta de que hemos utilizado <code>out geom;</code> en lugar de nuestra habitual sentencia <code>out</code> en nuestra última consulta. ¿Por qué?</p>
+
+<p>Para entenderlo, hablemos primero de <code>out</code>. La sentencia <code>out</code> es una llamada <em>action</em>, la única <em>action</em> en el Overpass QL. Lo que hace es tomar el conjunto de entrada (el conjunto de resultados/datos que le precede) e <code>imprimirlo</code>, para que podamos utilizar los datos (que vemos en el visor de mapas).</p>
+
+<p>Hasta ahora, sólo hemos utilizado la sentencia <code>out</code>. ¿Qué pasaría si utilizáramos <code>out</code> en lugar de <code>out geom</code> en nuestra última consulta? Intentémoslo.</p>
+</div><div class="exercise-lesson-instruction"><div class="exercise-lesson-label"> <span>Instructions</span></div> <ol>
+<li>Modifica la consulta existente para que utilice una sentencia <code>out</code> eliminando el modificador <code>geom</code>. Ten cuidado de no eliminar el punto y coma.</li>
+</ol>
+</div></div></div><div class="docs-repl exercise-main"><div class="editor-cover"></div> <textarea>area[name=Passau];
+way(area)[name=&#34;Innstraße&#34;];
+out geom;
+</textarea><div class="exercise-fail-msg"><div class="message"> <span class="warning">That doesn't seem right!</span> <span class="hint">Elimina geom del código de muestra.</span></div></div><div class="exercise-action-bar"><div class="exercise-action-bar-inner winner-bar"><div> <span>Awesome Work!</span> <a href="//maptimebogota.github.io/learnoverpass/es/exercises/intro/12/" class="exercise-action-next">Go to Next Lesson</a></div></div><div class="exercise-action-bar-inner"><div> <a href="#" class="exercise-action-run">Run Query</a> <a href="#" class="exercise-action-reset">Reset Code</a></div></div></div><div class="docs-repl-result output"><iframe src="https://overpass-turbo.eu/map.html?silent" seamless="seamless" frameBorder="0"></iframe><textarea></textarea> <a class="docs-repl-change-output button" href="#">Data</a></div></div><div class="exercise-answer">area[name=Passau];
+way(area)[name=&#34;Innstraße&#34;];
+out;
+</div><div class="exercise-regex"></div></div> <script src="//maptimebogota.github.io/learnoverpass//js/vendor.bundle.js"></script> <script src="//maptimebogota.github.io/learnoverpass//js/exercise.bundle.js"></script> </body></html>

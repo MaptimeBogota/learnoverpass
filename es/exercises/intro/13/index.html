@@ -1,0 +1,27 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us"><head><link href="http://gmpg.org/xfn/11" rel="profile"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><title>Around II</title><link rel="stylesheet" href="//maptimebogota.github.io/learnoverpass//css/main.css"> <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png"><link href="/favicon.png" rel="icon"><link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'><link href="" rel="alternate" type="application/rss+xml" title="LearnOverpass &middot; "/><meta name="description" content=""><meta name="keywords" content=""> </head><body><div class="exercise-contrib"><div> <a href="https://github.com/maptimebogota/learnoverpass/blob/master/CONTRIB.md">Contribute to project</a></div></div> <div class="menu-bar"><h1> <a href="//maptimebogota.github.io/learnoverpass//">LearnOverpass</a></h1></div><div class="exercise-container"><div class="exercise-lesson"><div class="exercise-lesson-bar"><div class="line">Intro</div></div><div class="exercise-lesson-inner"><div class="exercise-lesson-article"><h2> Around II  <a class="docs-improve" href="https://github.com/maptimebogota/learnoverpass/edit/master/content/es/exercises/intro/13.md">Improve page</a></h2> <p>&ldquo;¡Gracias!&rdquo; dice Bob mientras buscamos la ruta de vuelta. Él la sigue hasta llegar a la torre del observatorio. Una vez en la orilla del río, decide dejar la bici y ¡nadar hasta el observatorio!</p>
+
+<p>Al cabo de unos minutos, Bob regresa temblando y mojado.</p>
+
+<p>&ldquo;Brrrr&hellip; ¡el agua está fría!&rdquo; exclama Bob, cuando, de la nada, aparece el camarero del restaurante, todo vestido de blanco. De hecho, ¡ha seguido a Bob todo el camino!</p>
+
+<p>&ldquo;Señor&rdquo; dice el camarero, jadeando &ldquo;¡Todavía necesito esos 25 euros!&rdquo;. &ldquo;Sí, seguro&rdquo; dice Bob mientras saca su cartera mojada del bolsillo.</p>
+
+<p>&ldquo;Oh&rdquo; una expresión inexpresiva sale de él. &ldquo;¡Lo siento, parece que he perdido todo mi dinero nadando de vuelta aquí!&rdquo;.</p>
+
+<p>Camarero: <em>Facepalm</em></p>
+</div><div class="exercise-lesson-instruction"><div class="exercise-lesson-label"> <span>Instructions</span></div> <ol>
+<li>Vaya, parece que Bob sigue teniendo problemas. Probablemente se llevó el dinero de su cartera mientras nadaba de vuelta a la orilla. Por suerte, sus tarjetas de cajero automático siguen intactas, así que Bob sólo tiene que sacar dinero de un cajero cercano.</li>
+<li>Bob dice que vio un cajero automático de camino a la torre. Calcula que el cajero está a 150 m, más o menos.</li>
+<li>A partir de la quinta línea en blanco, crea una nueva consulta <code>node around</code> para imprimir los atm. Los ATMs son de tipo clave <code>amenity</code>, y toma el valor clave <code>atm</code>.</li>
+<li>Asegúrate de imprimir el conjunto resultante con <code>out;</code>.</li>
+</ol>
+</div></div></div><div class="docs-repl exercise-main"><div class="editor-cover"></div> <textarea>area[name=Inn];
+node(area)[&#34;tower:type&#34;=observation];
+out;
+</textarea><div class="exercise-fail-msg"><div class="message"> <span class="warning">That doesn't seem right!</span> <span class="hint">Vuelve a utilizar una consulta <code>around</code></span></div></div><div class="exercise-action-bar"><div class="exercise-action-bar-inner winner-bar"><div> <span>Awesome Work!</span> <a href="//maptimebogota.github.io/learnoverpass/es/exercises/intro/14/" class="exercise-action-next">Go to Next Lesson</a></div></div><div class="exercise-action-bar-inner"><div> <a href="#" class="exercise-action-run">Run Query</a> <a href="#" class="exercise-action-reset">Reset Code</a></div></div></div><div class="docs-repl-result output"><iframe src="https://overpass-turbo.eu/map.html?silent" seamless="seamless" frameBorder="0"></iframe><textarea></textarea> <a class="docs-repl-change-output button" href="#">Data</a></div></div><div class="exercise-answer">area[name=Inn];
+node(area)[&#34;tower:type&#34;=observation];
+out;
+
+node(around:150)[amenity=atm];
+out;
+</div><div class="exercise-regex"></div></div> <script src="//maptimebogota.github.io/learnoverpass//js/vendor.bundle.js"></script> <script src="//maptimebogota.github.io/learnoverpass//js/exercise.bundle.js"></script> </body></html>

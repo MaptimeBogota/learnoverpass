@@ -12,6 +12,18 @@
     
     
     <item>
+      <title>Recursión de nodos de way</title>
+      <link>//maptimebogota.github.io/learnoverpass/es/exercises/intro/15/</link>
+      <pubDate>Wed, 15 Jul 2015 16:35:50 +0800</pubDate>
+      
+      <guid>//maptimebogota.github.io/learnoverpass/es/exercises/intro/15/</guid>
+      <description>&amp;ldquo;¡Oh! ¡Veo ese edificio!&amp;rdquo; exclama Bob. &amp;ldquo;Así que el cajero automático está justo al otro lado, ¿no?&amp;rdquo;.
+Mientras Bob caminaba hacia el edificio, se dio cuenta de una cosa importante: ¡no sabía dónde está la entrada! Parece que tenemos que escribirle otra consulta.
+Con la consulta actual, hemos encontrado el edificio, pero tenemos que localizar un punto concreto: la entrada.
+Un edificio, dado que generalmente es un polígono visto desde el mapa, se define como una &amp;ldquo;entrada&amp;rdquo;.</description>
+    </item>
+    
+    <item>
       <title>Way Node Recursion</title>
       <link>//maptimebogota.github.io/learnoverpass/en/exercises/intro/15/</link>
       <pubDate>Wed, 15 Jul 2015 16:35:50 +0800</pubDate>
@@ -21,6 +33,16 @@
 As Bob walked to the building, he realized one important thing - he didn’t know where the entrance is! Looks like we need to write another query for him!
 With the existing query, we’ve successfully found the building, but we need to further locate a specific point - the building’s entrance.
 A building, since it’s generally a polygon when viewed from the map, is defined as a way.</description>
+    </item>
+    
+    <item>
+      <title>Polígono Way cerrado</title>
+      <link>//maptimebogota.github.io/learnoverpass/es/exercises/intro/14/</link>
+      <pubDate>Tue, 14 Jul 2015 16:35:50 +0800</pubDate>
+      
+      <guid>//maptimebogota.github.io/learnoverpass/es/exercises/intro/14/</guid>
+      <description>&amp;ldquo;Hmm, no lo veo desde el observatorio, pero sí desde el mapa de consulta del paso elevado&amp;rdquo;, dice Bob. Efectivamente, el cajero está en el lado opuesto de un edificio (el polígono parduzco del visor de mapas).
+Sigamos adelante y consultemos tanto el cajero como el edificio, para que Bob pueda tener una mejor idea de dónde está el cajero.</description>
     </item>
     
     <item>
@@ -45,6 +67,28 @@ After a few minutes, Bob comes back, shivering and wet.
     </item>
     
     <item>
+      <title>Around II</title>
+      <link>//maptimebogota.github.io/learnoverpass/es/exercises/intro/13/</link>
+      <pubDate>Mon, 13 Jul 2015 16:35:50 +0800</pubDate>
+      
+      <guid>//maptimebogota.github.io/learnoverpass/es/exercises/intro/13/</guid>
+      <description>&amp;ldquo;¡Gracias!&amp;rdquo; dice Bob mientras buscamos la ruta de vuelta. Él la sigue hasta llegar a la torre del observatorio. Una vez en la orilla del río, decide dejar la bici y ¡nadar hasta el observatorio!
+Al cabo de unos minutos, Bob regresa temblando y mojado.
+&amp;ldquo;Brrrr&amp;hellip; ¡el agua está fría!&amp;rdquo; exclama Bob, cuando, de la nada, aparece el camarero del restaurante, todo vestido de blanco. De hecho, ¡ha seguido a Bob todo el camino!</description>
+    </item>
+    
+    <item>
+      <title>Datos del modificador Out</title>
+      <link>//maptimebogota.github.io/learnoverpass/es/exercises/intro/12/</link>
+      <pubDate>Sun, 12 Jul 2015 16:35:50 +0800</pubDate>
+      
+      <guid>//maptimebogota.github.io/learnoverpass/es/exercises/intro/12/</guid>
+      <description>&amp;ldquo;¡Uaaghhh! Qué le ha pasado a mi mapa!&amp;rdquo; Bob exclama al ver el mapa vacío.
+Como ves, al usar una sentencia out se producía un mapa vacío.
+Verás, nuestra sentencia out imprime los datos que recibe, eso si puede. Una vía sólo lleva una referencia a la lista de nodos que la componen - prueba a hacer clic en el botón data de la parte superior derecha de la vista del mapa.</description>
+    </item>
+    
+    <item>
       <title>Out Modificator Data</title>
       <link>//maptimebogota.github.io/learnoverpass/en/exercises/intro/12/</link>
       <pubDate>Sun, 12 Jul 2015 16:35:50 +0800</pubDate>
@@ -53,6 +97,18 @@ After a few minutes, Bob comes back, shivering and wet.
       <description>“Uaaghhh! What happened to my map!” Bob exclaims as he saw the now empty map view.
 So you see, using a bare out statement produced an empty map.
 See, our out statement prints out the data that it receives, that is, if it can. A way only carries a reference to the list of nodes that make up for it - try clicking the ‘data’ button on the top right of the map view.</description>
+    </item>
+    
+    <item>
+      <title>Modificadores Out</title>
+      <link>//maptimebogota.github.io/learnoverpass/es/exercises/intro/11/</link>
+      <pubDate>Sat, 11 Jul 2015 16:35:50 +0800</pubDate>
+      
+      <guid>//maptimebogota.github.io/learnoverpass/es/exercises/intro/11/</guid>
+      <description>¡Increíblemente buen trabajo!
+&amp;ldquo;¡Gracias!&amp;rdquo; Dijo Bob mientras se subía a su moto. &amp;ldquo;¡Entonces seguiré este camino hasta el observatorio!&amp;rdquo;.
+Los dos últimos ejercicios introdujeron bastantes cosas, en concreto, way y el modificador out geom.
+Un way es otro elemento OSM (como node) que describe una característica lineal o área. Por ahora, acepta que una &amp;ldquo;vía&amp;rdquo; también puede definir áreas. La información relevante que necesitamos aprender es que una &amp;ldquo;vía&amp;rdquo; se utiliza normalmente para definir carreteras, arroyos y autopistas, entre otras cosas.</description>
     </item>
     
     <item>
@@ -78,6 +134,28 @@ This is obviously unacceptable - Overpass showed us all the ways named “Innstr
     </item>
     
     <item>
+      <title>Way como Area</title>
+      <link>//maptimebogota.github.io/learnoverpass/es/exercises/intro/10/</link>
+      <pubDate>Fri, 10 Jul 2015 16:35:50 +0800</pubDate>
+      
+      <guid>//maptimebogota.github.io/learnoverpass/es/exercises/intro/10/</guid>
+      <description>&amp;ldquo;Ahm, ¿estás seguro de que esto está bien?&amp;rdquo; Dice Bob al ver las diferentes formas. ¡oh oh!
+Hemos conseguido buscar vías con el nombre &amp;ldquo;Innstraße&amp;rdquo;, pero desgraciadamente parece que hay bastantes vías que se llaman igual.
+Esto es obviamente inaceptable - Overpass nos mostró todas las vías llamadas &amp;ldquo;Innstraße&amp;rdquo; alrededor del mundo, pero sólo estamos interesados en la &amp;ldquo;Innstraße&amp;rdquo; cerca de Bob.
+Como sabemos que Bob está en Passau, lo que podemos hacer es buscar las vías que sólo están en Passau.</description>
+    </item>
+    
+    <item>
+      <title>Consulta Way</title>
+      <link>//maptimebogota.github.io/learnoverpass/es/exercises/intro/9/</link>
+      <pubDate>Thu, 09 Jul 2015 16:35:50 +0800</pubDate>
+      
+      <guid>//maptimebogota.github.io/learnoverpass/es/exercises/intro/9/</guid>
+      <description>Bob examina cuidadosamente la moto en el aparcamiento, intentando encontrar la suya. &amp;ldquo;¡Ajá!&amp;rdquo;, exclama Bob, mientras coge la bicicleta roja que sólo podemos suponer que es suya.
+Ahora que Bob está en su bicicleta, necesita ir al observatorio para encontrar su cartera. Como ya sabemos que Bob tiene un mal sentido de la orientación (¡se perdió!), lo mejor sería mostrarle la carretera principal que debe tomar para llegar al observatorio.</description>
+    </item>
+    
+    <item>
       <title>Way Query</title>
       <link>//maptimebogota.github.io/learnoverpass/en/exercises/intro/9/</link>
       <pubDate>Thu, 09 Jul 2015 16:35:50 +0800</pubDate>
@@ -99,6 +177,17 @@ Luckily, Bob remembers leaving his bicycle in the nearest parking space. Let’s
     </item>
     
     <item>
+      <title>Around por Area</title>
+      <link>//maptimebogota.github.io/learnoverpass/es/exercises/intro/8/</link>
+      <pubDate>Wed, 08 Jul 2015 16:35:50 +0800</pubDate>
+      
+      <guid>//maptimebogota.github.io/learnoverpass/es/exercises/intro/8/</guid>
+      <description>&amp;ldquo;Al menos ahora sé dónde está el observatorio&amp;rdquo;, dice Bob.
+Al ver la distancia que les separa, Bob se pone nervioso. ¡Es un camino muy largo!
+Por suerte, Bob recuerda haber dejado su bicicleta en el aparcamiento más cercano. ¡Vamos a buscar la bicicleta de Bob!</description>
+    </item>
+    
+    <item>
       <title>By Area</title>
       <link>//maptimebogota.github.io/learnoverpass/en/exercises/intro/7/</link>
       <pubDate>Tue, 07 Jul 2015 16:35:50 +0800</pubDate>
@@ -107,6 +196,17 @@ Luckily, Bob remembers leaving his bicycle in the nearest parking space. Let’s
       <description>“Bingo!” Bob says as he walks towards the restaurant.
 See how powerful the Overpass QL is in querying OSM data? It has a plethora of different filters and statements, and combining them with each other can create even more specific queries for your use cases.
 Our previous example introduces a very important metaphor in the Overpass Query Language, which is ‘flow’. A good way to think of the Overpass API is that it allows OSM data (nodes, etc.</description>
+    </item>
+    
+    <item>
+      <title>Por zona</title>
+      <link>//maptimebogota.github.io/learnoverpass/es/exercises/intro/7/</link>
+      <pubDate>Tue, 07 Jul 2015 16:35:50 +0800</pubDate>
+      
+      <guid>//maptimebogota.github.io/learnoverpass/es/exercises/intro/7/</guid>
+      <description>&amp;ldquo;¡Bingo!&amp;rdquo; dice Bob mientras camina hacia el restaurante.
+¿Ves lo poderoso que es Overpass QL en la consulta de datos OSM? Tiene una plétora de diferentes filtros y declaraciones, y la combinación de ellos entre sí puede crear consultas aún más específicas para sus casos de uso.
+Nuestro ejemplo anterior introduce una metáfora muy importante en el Lenguaje de Consulta de Overpass, que es el &amp;lsquo;flujo&amp;rsquo;. Una buena manera de pensar en la API Overpass es que permite que los datos OSM (nodos, etc.</description>
     </item>
     
     <item>
@@ -121,6 +221,17 @@ However, it’s quite problematic - we haven’t actually found any restaurants,
     </item>
     
     <item>
+      <title>Filtrar por etiqueta III</title>
+      <link>//maptimebogota.github.io/learnoverpass/es/exercises/intro/6/</link>
+      <pubDate>Mon, 06 Jul 2015 16:35:50 +0800</pubDate>
+      
+      <guid>//maptimebogota.github.io/learnoverpass/es/exercises/intro/6/</guid>
+      <description>&amp;ldquo;¡Guau, genial! Veo muchos nodos a mi alrededor, pero hay demasiados, ¡y no estoy seguro de cuáles son los restaurantes!&amp;rdquo;.
+Usamos el filtro around en nuestro ejemplo anterior para buscar nodos alrededor de nuestro nodo en particular, ¡y funcionó! Como se puede ver en el visor de mapas, vemos los datos OSM alrededor de nuestra primera declaración.
+Sin embargo, es bastante problemático: en realidad no hemos encontrado ningún restaurante, ¡y hay demasiados nodos!</description>
+    </item>
+    
+    <item>
       <title>Around Filter</title>
       <link>//maptimebogota.github.io/learnoverpass/en/exercises/intro/5/</link>
       <pubDate>Sun, 05 Jul 2015 16:35:50 +0800</pubDate>
@@ -131,13 +242,23 @@ Not really. See, our first statement node(2190458950) is already a node, so filt
     </item>
     
     <item>
-      <title>Filter by Tag III?</title>
-      <link>//maptimebogota.github.io/learnoverpass/en/exercises/intro/4/</link>
+      <title>Filtro alrededor</title>
+      <link>//maptimebogota.github.io/learnoverpass/es/exercises/intro/5/</link>
+      <pubDate>Sun, 05 Jul 2015 16:35:50 +0800</pubDate>
+      
+      <guid>//maptimebogota.github.io/learnoverpass/es/exercises/intro/5/</guid>
+      <description>&amp;ldquo;¡Vaya, está vacío! ¿Será que no hay restaurantes cerca de mí?&amp;rdquo;, pregunta Bob.
+Pues no. Verás, nuestra primera sentencia node(2190458950) es ya un nodo, ¡así que filtrarlo más no haría nada! Y como hemos añadido un nuevo filtro (restaurantes) a una sentencia que sabemos que nos da un árbol, básicamente le hemos pedido a OSM que filtre aún más nuestro conjunto de resultados (un nodo árbol) para que sólo muestre restaurantes, lo que obviamente hace que OSM no haga nada (¡ya que un árbol no es un restaurante!</description>
+    </item>
+    
+    <item>
+      <title>¿Filtrar por etiqueta III?</title>
+      <link>//maptimebogota.github.io/learnoverpass/es/exercises/intro/4/</link>
       <pubDate>Sat, 04 Jul 2015 16:35:50 +0800</pubDate>
       
-      <guid>//maptimebogota.github.io/learnoverpass/en/exercises/intro/4/</guid>
-      <description>“Well isn’t that better? Shorter and easier to work with.”
-“You know, I’ve been waiting for you for quite a while, I’m hungry! Since my GPS doesn’t really seem to be all that reliable, would you mind looking for a place near me where I can eat?&amp;rdquo;</description>
+      <guid>//maptimebogota.github.io/learnoverpass/es/exercises/intro/4/</guid>
+      <description>&amp;ldquo;¿No es mejor así? Más corto y más fácil de trabajar&amp;rdquo;.
+&amp;ldquo;Sabes, llevo esperándote un buen rato, ¡tengo hambre! Como mi GPS no parece muy fiable, ¿te importaría buscarme un sitio cerca donde pueda comer?&amp;rdquo;.</description>
     </item>
     
     <item>
@@ -151,6 +272,16 @@ If you notice on the text editor on the right, [natural=tree] is placed on the 2
     </item>
     
     <item>
+      <title>Filtrar por etiqueta II</title>
+      <link>//maptimebogota.github.io/learnoverpass/es/exercises/intro/3/</link>
+      <pubDate>Fri, 03 Jul 2015 16:35:50 +0800</pubDate>
+      
+      <guid>//maptimebogota.github.io/learnoverpass/es/exercises/intro/3/</guid>
+      <description>¡Impresionante! ¡Hemos filtrado nuestros datos para que sólo muestren árboles!
+Si te fijas, en el editor de texto de la derecha, [natural=tree] está en la segunda línea. Overpass Turbo le permite añadir sangrías y líneas adicionales según le convenga, así que siéntate libre de hacer un amplio uso de ellas para hacer tus consultas más legibles. Sin embargo, ten en cuenta que el punto y coma también se coloca en la segunda línea para indicar a Overpass que la sentencia ha terminado.</description>
+    </item>
+    
+    <item>
       <title>Filter By Tag</title>
       <link>//maptimebogota.github.io/learnoverpass/en/exercises/intro/2/</link>
       <pubDate>Thu, 02 Jul 2015 16:35:50 +0800</pubDate>
@@ -159,6 +290,28 @@ If you notice on the text editor on the right, [natural=tree] is placed on the 2
       <description>Nice! As you can see the Query Language might look cryptic at first, but it’s actually quite straightforward!
 Those circles you see in the map view are &amp;ldquo;points of interest&amp;rdquo; called “nodes”. Try clicking on them - some just contain their own positions (lat/lon) but some of them are tagged and contain other data, such as names, type of node, etc, etc.
 Since our friend “Bob” has a pretty inaccurate GPS, he only managed to give us rough coordinates.</description>
+    </item>
+    
+    <item>
+      <title>Filtrar por etiqueta</title>
+      <link>//maptimebogota.github.io/learnoverpass/es/exercises/intro/2/</link>
+      <pubDate>Thu, 02 Jul 2015 16:35:50 +0800</pubDate>
+      
+      <guid>//maptimebogota.github.io/learnoverpass/es/exercises/intro/2/</guid>
+      <description>Muy bien. Como puedes ver, el lenguaje de consulta puede parecer críptico al principio, pero en realidad es bastante sencillo.
+Esos círculos que ves en la vista del mapa son &amp;ldquo;puntos de interés&amp;rdquo; llamados &amp;ldquo;nodos&amp;rdquo;. Prueba a hacer clic en ellos: algunos sólo contienen sus propias posiciones (lat/lon), pero otros están etiquetados y contienen otros datos, como nombres, tipo de nodo, etc, etc.
+Como nuestro amigo &amp;ldquo;Bob&amp;rdquo; tiene un GPS bastante impreciso, sólo consiguió darnos unas coordenadas aproximadas.</description>
+    </item>
+    
+    <item>
+      <title>Introducción</title>
+      <link>//maptimebogota.github.io/learnoverpass/es/exercises/intro/1/</link>
+      <pubDate>Wed, 01 Jul 2015 16:35:50 +0800</pubDate>
+      
+      <guid>//maptimebogota.github.io/learnoverpass/es/exercises/intro/1/</guid>
+      <description>¡Hola y bienvenido a LearnOverpass!
+La API Overpass es una potente API que te permite consultar datos de OpenStreetMap. Puedes encontrar diferentes lugares, rutas a lugares, y todo bajo el sol, ¡literalmente! Puedes &amp;ldquo;hablar&amp;rdquo; con ella y solicitar datos para tu uso específico, utilizando su propio lenguaje, el &amp;ldquo;Lenguaje de consulta de Overpass&amp;rdquo; (QL).
+Lo que ves a la derecha es un editor de texto donde puedes escribir tus comandos QL.</description>
     </item>
     
     <item>
@@ -209,12 +362,12 @@ way[name=&amp;quot;Foo&amp;quot;]; foreach( ( ._; &amp;gt;; ); out; );  For each
     </item>
     
     <item>
-      <title>Overpass API is a highly optimized, read-only API built for gathering OSM map data.</title>
-      <link>//maptimebogota.github.io/learnoverpass/de/</link>
-      <pubDate>Wed, 06 May 2015 11:09:35 +0000</pubDate>
+      <title></title>
+      <link>//maptimebogota.github.io/learnoverpass/en/exercises/intro/4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//maptimebogota.github.io/learnoverpass/de/</guid>
-      <description>Currently untranslated</description>
+      <guid>//maptimebogota.github.io/learnoverpass/en/exercises/intro/4/</guid>
+      <description>w&amp;mdash; date: &amp;ldquo;2015-07-04T16:35:50+08:00&amp;rdquo; title: &amp;ldquo;Filter by Tag III?&amp;rdquo; type: &amp;ldquo;exercise&amp;rdquo; section: &amp;ldquo;exercise&amp;rdquo; code: | node(48.5657094, 13.4490548, 48.5662416, 13.4501676) [natural=tree] [height=20]; out; instructions: | 1. Bob is looking for a near place where he can eat. 2. Let’s find a restaurant for him. Restaurants are amenities, so restaurants are tagged as [amenity=restaurant]. 3. But wait! How do we query for restaurants near him? Maybe we can add [amenity=restaurant] as a filter for the current node?</description>
     </item>
     
     <item>

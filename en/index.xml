@@ -131,16 +131,6 @@ Not really. See, our first statement node(2190458950) is already a node, so filt
     </item>
     
     <item>
-      <title>Filter by Tag III?</title>
-      <link>//maptimebogota.github.io/learnoverpass/en/exercises/intro/4/</link>
-      <pubDate>Sat, 04 Jul 2015 16:35:50 +0800</pubDate>
-      
-      <guid>//maptimebogota.github.io/learnoverpass/en/exercises/intro/4/</guid>
-      <description>“Well isn’t that better? Shorter and easier to work with.”
-“You know, I’ve been waiting for you for quite a while, I’m hungry! Since my GPS doesn’t really seem to be all that reliable, would you mind looking for a place near me where I can eat?&amp;rdquo;</description>
-    </item>
-    
-    <item>
       <title>Filter By Tag II</title>
       <link>//maptimebogota.github.io/learnoverpass/en/exercises/intro/3/</link>
       <pubDate>Fri, 03 Jul 2015 16:35:50 +0800</pubDate>
@@ -170,6 +160,15 @@ Since our friend “Bob” has a pretty inaccurate GPS, he only managed to give 
       <description>Hello and welcome to LearnOverpass!
 The Overpass API is a powerful API that lets you query data from OpenStreetMap. You can find different places, routes to locations, and everything under the sun, quite literally! You can ‘talk’ to it and request data for your own specific use, using its own language, the “Overpass Query Language” (QL).
 What you see on the right is a text editor where you can type in your QL commands.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//maptimebogota.github.io/learnoverpass/en/exercises/intro/4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//maptimebogota.github.io/learnoverpass/en/exercises/intro/4/</guid>
+      <description>w&amp;mdash; date: &amp;ldquo;2015-07-04T16:35:50+08:00&amp;rdquo; title: &amp;ldquo;Filter by Tag III?&amp;rdquo; type: &amp;ldquo;exercise&amp;rdquo; section: &amp;ldquo;exercise&amp;rdquo; code: | node(48.5657094, 13.4490548, 48.5662416, 13.4501676) [natural=tree] [height=20]; out; instructions: | 1. Bob is looking for a near place where he can eat. 2. Let’s find a restaurant for him. Restaurants are amenities, so restaurants are tagged as [amenity=restaurant]. 3. But wait! How do we query for restaurants near him? Maybe we can add [amenity=restaurant] as a filter for the current node?</description>
     </item>
     
   </channel>

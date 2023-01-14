@@ -1,0 +1,29 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us"><head><link href="http://gmpg.org/xfn/11" rel="profile"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><title>Around por Area</title><link rel="stylesheet" href="//maptimebogota.github.io/learnoverpass//css/main.css"> <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png"><link href="/favicon.png" rel="icon"><link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'><link href="" rel="alternate" type="application/rss+xml" title="LearnOverpass &middot; "/><meta name="description" content=""><meta name="keywords" content=""> </head><body><div class="exercise-contrib"><div> <a href="https://github.com/maptimebogota/learnoverpass/blob/master/CONTRIB.md">Contribute to project</a></div></div> <div class="menu-bar"><h1> <a href="//maptimebogota.github.io/learnoverpass//">LearnOverpass</a></h1></div><div class="exercise-container"><div class="exercise-lesson"><div class="exercise-lesson-bar"><div class="line">Intro</div></div><div class="exercise-lesson-inner"><div class="exercise-lesson-article"><h2> Around por Area  <a class="docs-improve" href="https://github.com/maptimebogota/learnoverpass/edit/master/content/es/exercises/intro/8.md">Improve page</a></h2> <p>&ldquo;Al menos ahora sé dónde está el observatorio&rdquo;, dice Bob.</p>
+
+<p>Al ver la distancia que les separa, Bob se pone nervioso. ¡Es un camino muy largo!</p>
+
+<p>Por suerte, Bob recuerda haber dejado su bicicleta en el aparcamiento más cercano. ¡Vamos a buscar la bicicleta de Bob!</p>
+</div><div class="exercise-lesson-instruction"><div class="exercise-lesson-label"> <span>Instructions</span></div> <ol>
+<li>Tenemos que encontrar la bicicleta de Bob, que él sabe que está a unos 100 metros del restaurante. Tendremos que volver a utilizar el enunciado &ldquo;around&rdquo;.</li>
+<li>Las zonas de aparcamiento de bicicletas se etiquetan como <code>[amenity=bicycle_parking]</code>. Ahora ya deberías saber qué declaración debemos utilizar.</li>
+<li>Ten en cuenta que nuestra declaración utiliza &ldquo;around&rdquo;, así que asegúrate de colocar la declaración correctamente para que encuentre la plaza de aparcamiento alrededor de <em>el restaurante</em> en lugar de <em>la torre</em>. Recuerda que Overpass tiene el concepto de &ldquo;flujo&rdquo;. ¿Dónde crees que deberías colocar nuestra sentencia <em>around</em>?</li>
+<li>Una vez que lo hayas añadido, asegúrate de añadir también <code>out;</code> después de tu sentencia para imprimir el nodo de aparcamiento de bicicletas.</li>
+</ol>
+</div></div></div><div class="docs-repl exercise-main"><div class="editor-cover"></div> <textarea>node(48.5657094, 13.4490548, 48.5662416, 13.4501676)[natural=tree][height=20];
+node(around:150)[amenity=restaurant];
+out;
+
+area[name=Inn];
+node(area)[&#34;tower:type&#34;=observation];
+out;
+</textarea><div class="exercise-fail-msg"><div class="message"> <span class="warning">That doesn't seem right!</span> <span class="hint">La consulta alrededor se basa en el conjunto de resultados (en este caso, el resultado de la consulta anterior)</span></div></div><div class="exercise-action-bar"><div class="exercise-action-bar-inner winner-bar"><div> <span>Awesome Work!</span> <a href="//maptimebogota.github.io/learnoverpass/es/exercises/intro/9/" class="exercise-action-next">Go to Next Lesson</a></div></div><div class="exercise-action-bar-inner"><div> <a href="#" class="exercise-action-run">Run Query</a> <a href="#" class="exercise-action-reset">Reset Code</a></div></div></div><div class="docs-repl-result output"><iframe src="https://overpass-turbo.eu/map.html?silent" seamless="seamless" frameBorder="0"></iframe><textarea></textarea> <a class="docs-repl-change-output button" href="#">Data</a></div></div><div class="exercise-answer">node(48.5657094, 13.4490548, 48.5662416, 13.4501676)[natural=tree][height=20];
+node(around:150)[amenity=restaurant];
+out;
+
+node(around:100)[amenity=bicycle_parking];
+out;
+
+area[name=Inn];
+node(area)[&#34;tower:type&#34;=observation];
+out;
+</div><div class="exercise-regex"></div></div> <script src="//maptimebogota.github.io/learnoverpass//js/vendor.bundle.js"></script> <script src="//maptimebogota.github.io/learnoverpass//js/exercise.bundle.js"></script> </body></html>

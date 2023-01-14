@@ -1,0 +1,26 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us"><head><link href="http://gmpg.org/xfn/11" rel="profile"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><title>Consulta Way</title><link rel="stylesheet" href="//maptimebogota.github.io/learnoverpass//css/main.css"> <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png"><link href="/favicon.png" rel="icon"><link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'><link href="" rel="alternate" type="application/rss+xml" title="LearnOverpass &middot; "/><meta name="description" content=""><meta name="keywords" content=""> </head><body><div class="exercise-contrib"><div> <a href="https://github.com/maptimebogota/learnoverpass/blob/master/CONTRIB.md">Contribute to project</a></div></div> <div class="menu-bar"><h1> <a href="//maptimebogota.github.io/learnoverpass//">LearnOverpass</a></h1></div><div class="exercise-container"><div class="exercise-lesson"><div class="exercise-lesson-bar"><div class="line">Intro</div></div><div class="exercise-lesson-inner"><div class="exercise-lesson-article"><h2> Consulta Way  <a class="docs-improve" href="https://github.com/maptimebogota/learnoverpass/edit/master/content/es/exercises/intro/9.md">Improve page</a></h2> <p>Bob examina cuidadosamente la moto en el aparcamiento, intentando encontrar la suya. &ldquo;¡Ajá!&rdquo;, exclama Bob, mientras coge la bicicleta roja que sólo podemos suponer que es suya.</p>
+
+<p>Ahora que Bob está en su bicicleta, necesita ir al observatorio para encontrar su cartera. Como ya sabemos que Bob tiene un mal sentido de la orientación (¡se perdió!), lo mejor sería mostrarle la carretera principal que debe tomar para llegar al observatorio.</p>
+
+<p>Si miras el visor de mapas con atención, verás que entre el aparcamiento para bicicletas y la torre del observatorio se encuentra la carretera principal &ldquo;Innstraße&rdquo;. Como la carretera principal que Bob debe tomar para llegar al observatorio. ¿Cómo podemos mostrar esto? ¿Usando <code>node</code>, y teniendo &ldquo;name=&ldquo;Innstraße&rdquo; como filtro quizás?</p>
+
+<p>Pues no. Recuerda que los <code>node</code>s son <strong>extrictamente</strong> para <em>puntos</em> de interés. No pueden cartografiar carreteras, ya que no existen como puntos individuales.</p>
+</div><div class="exercise-lesson-instruction"><div class="exercise-lesson-label"> <span>Instructions</span></div> <ol>
+<li>Borra todas las líneas del editor por ahora, no necesitaremos los nodos.</li>
+<li>Al igual que <code>area</code> podemos utilizar otro tipo de elemento OSM aquí para consultar la carretera. A saber, podemos utilizar la declaración <code>way</code>.</li>
+<li>Crea una sentencia <code>way</code> filtrada a &ldquo;Innstraße&rdquo;. Puedes seguir la misma forma que las sentencias <code>node</code> y <code>area</code>. Ten en cuenta que deberá rodear la clave de filtro &ldquo;Innstraße&rdquo; con comillas, ya que contiene el carácter especial &ldquo;ß&rdquo;.</li>
+<li>Por último, tendrías que mostrar el camino. Sin embargo, en lugar de usar simplemente <code>out</code>, tendrías que usar el modificador personalizado <code>geom</code>, para que la sentencia diga <code>out geom;</code>.</li>
+</ol>
+</div></div></div><div class="docs-repl exercise-main"><div class="editor-cover"></div> <textarea>node(48.5657094, 13.4490548, 48.5662416, 13.4501676)[natural=tree][height=20];
+node(around:150)[amenity=restaurant];
+out;
+
+node(around:100)[amenity=bicycle_parking];
+out;
+
+area[name=Inn];
+node(area)[&#34;tower:type&#34;=observation];
+out;
+</textarea><div class="exercise-fail-msg"><div class="message"> <span class="warning">That doesn't seem right!</span> <span class="hint">El elemento way puede filtrarse igual que los nodos.</span></div></div><div class="exercise-action-bar"><div class="exercise-action-bar-inner winner-bar"><div> <span>Awesome Work!</span> <a href="//maptimebogota.github.io/learnoverpass/es/exercises/intro/10/" class="exercise-action-next">Go to Next Lesson</a></div></div><div class="exercise-action-bar-inner"><div> <a href="#" class="exercise-action-run">Run Query</a> <a href="#" class="exercise-action-reset">Reset Code</a></div></div></div><div class="docs-repl-result output"><iframe src="https://overpass-turbo.eu/map.html?silent" seamless="seamless" frameBorder="0"></iframe><textarea></textarea> <a class="docs-repl-change-output button" href="#">Data</a></div></div><div class="exercise-answer">way[name=&#34;Innstraße&#34;];
+out geom;
+</div><div class="exercise-regex"></div></div> <script src="//maptimebogota.github.io/learnoverpass//js/vendor.bundle.js"></script> <script src="//maptimebogota.github.io/learnoverpass//js/exercise.bundle.js"></script> </body></html>

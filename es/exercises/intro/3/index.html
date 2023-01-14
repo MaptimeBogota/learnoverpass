@@ -1,0 +1,23 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us"><head><link href="http://gmpg.org/xfn/11" rel="profile"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><title>Filtrar por etiqueta II</title><link rel="stylesheet" href="//maptimebogota.github.io/learnoverpass//css/main.css"> <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png"><link href="/favicon.png" rel="icon"><link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'><link href="" rel="alternate" type="application/rss+xml" title="LearnOverpass &middot; "/><meta name="description" content=""><meta name="keywords" content=""> </head><body><div class="exercise-contrib"><div> <a href="https://github.com/maptimebogota/learnoverpass/blob/master/CONTRIB.md">Contribute to project</a></div></div> <div class="menu-bar"><h1> <a href="//maptimebogota.github.io/learnoverpass//">LearnOverpass</a></h1></div><div class="exercise-container"><div class="exercise-lesson"><div class="exercise-lesson-bar"><div class="line">Intro</div></div><div class="exercise-lesson-inner"><div class="exercise-lesson-article"><h2> Filtrar por etiqueta II  <a class="docs-improve" href="https://github.com/maptimebogota/learnoverpass/edit/master/content/es/exercises/intro/3.md">Improve page</a></h2> <p>¡Impresionante! ¡Hemos filtrado nuestros datos para que sólo muestren árboles!</p>
+
+<p>Si te fijas, en el editor de texto de la derecha, [natural=tree] está en la segunda línea. Overpass Turbo le permite añadir sangrías y líneas adicionales según le convenga, así que siéntate libre de hacer un amplio uso de ellas para hacer tus consultas más legibles. Sin embargo, ten en cuenta que el punto y coma también se coloca en la segunda línea para indicar a Overpass que la sentencia ha terminado. Considéralo como el punto y aparte de Overpass.</p>
+
+<p>De todos modos, hemos filtrado con éxito los datos para solicitar sólo árboles. Sin embargo, seguimos teniendo un problema. Aunque &ldquo;Bob&rdquo; nos ha dicho que está en un árbol, ¡hay TRES árboles en la zona!</p>
+
+<p>&ldquo;¡Hola! ¡Hola! Query Writer&rdquo; dice Bob.</p>
+
+<p>Bob: &ldquo;Parece que estamos en un buen aprieto. No estoy seguro de cómo puedo ayudar, pero sé que estoy junto al árbol más alto de la zona&rdquo;.</p>
+
+<p>Woah, Bob acaba de hablar con nosotros, ¡y menciona estar junto al árbol más alto! Si te fijas, los nodos de los árboles también están etiquetados por su altura. Puedes usarlas para filtrar aún más tus datos.</p>
+</div><div class="exercise-lesson-instruction"><div class="exercise-lesson-label"> <span>Instructions</span></div> <ol>
+<li>Parece que no fuimos lo suficientemente específicos. Sin embargo, sabemos que Bob está junto al árbol más alto de la zona, ¡utilicemos esa información para buscarlo! Haz clic en los nodos del mapa y encuentra el árbol más alto.</li>
+<li>Puedes combinar filtros escribiéndolos junto a la consulta, como hicimos con <code>[natural=tree]</code>. Recuerda poner el segundo filtro antes del punto y coma.</li>
+</ol>
+</div></div></div><div class="docs-repl exercise-main"><div class="editor-cover"></div> <textarea>node(48.5657094, 13.4490548, 48.5662416, 13.4501676)
+    [natural=tree];
+out;
+</textarea><div class="exercise-fail-msg"><div class="message"> <span class="warning">That doesn't seem right!</span> <span class="hint">Prueba la altura del árbol más alto. Combina los filtros poniéndolos uno al lado del otro.</span></div></div><div class="exercise-action-bar"><div class="exercise-action-bar-inner winner-bar"><div> <span>Awesome Work!</span> <a href="//maptimebogota.github.io/learnoverpass/es/exercises/intro/4/" class="exercise-action-next">Go to Next Lesson</a></div></div><div class="exercise-action-bar-inner"><div> <a href="#" class="exercise-action-run">Run Query</a> <a href="#" class="exercise-action-reset">Reset Code</a></div></div></div><div class="docs-repl-result output"><iframe src="https://overpass-turbo.eu/map.html?silent" seamless="seamless" frameBorder="0"></iframe><textarea></textarea> <a class="docs-repl-change-output button" href="#">Data</a></div></div><div class="exercise-answer">node(48.5657094, 13.4490548, 48.5662416, 13.4501676)
+    [natural=tree]
+    [height=20];
+out;
+</div><div class="exercise-regex"></div></div> <script src="//maptimebogota.github.io/learnoverpass//js/vendor.bundle.js"></script> <script src="//maptimebogota.github.io/learnoverpass//js/exercise.bundle.js"></script> </body></html>
