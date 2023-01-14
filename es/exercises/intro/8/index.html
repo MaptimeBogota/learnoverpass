@@ -4,23 +4,23 @@
 
 <p>Por suerte, Bob recuerda haber dejado su bicicleta en el aparcamiento más cercano. ¡Vamos a buscar la bicicleta de Bob!</p>
 </div><div class="exercise-lesson-instruction"><div class="exercise-lesson-label"> <span>Instructions</span></div> <ol>
-<li>Tenemos que encontrar la bicicleta de Bob, que él sabe que está a unos 100 metros del restaurante. Tendremos que volver a utilizar el enunciado &ldquo;around&rdquo;.</li>
+<li>Tenemos que encontrar la bicicleta de Bob, que él sabe que está a unos 120 metros del restaurante. Tendremos que volver a utilizar el enunciado &ldquo;around&rdquo;.</li>
 <li>Las zonas de aparcamiento de bicicletas se etiquetan como <code>[amenity=bicycle_parking]</code>. Ahora ya deberías saber qué declaración debemos utilizar.</li>
 <li>Ten en cuenta que nuestra declaración utiliza &ldquo;around&rdquo;, así que asegúrate de colocar la declaración correctamente para que encuentre la plaza de aparcamiento alrededor de <em>el restaurante</em> en lugar de <em>la torre</em>. Recuerda que Overpass tiene el concepto de &ldquo;flujo&rdquo;. ¿Dónde crees que deberías colocar nuestra sentencia <em>around</em>?</li>
 <li>Una vez que lo hayas añadido, asegúrate de añadir también <code>out;</code> después de tu sentencia para imprimir el nodo de aparcamiento de bicicletas.</li>
 </ol>
 </div></div></div><div class="docs-repl exercise-main"><div class="editor-cover"></div> <textarea>node(48.5657094, 13.4490548, 48.5662416, 13.4501676)[natural=tree][height=20];
-node(around:150)[amenity=restaurant];
+node(around:450)[amenity=restaurant];
 out;
 
 area[name=Inn];
 node(area)[&#34;tower:type&#34;=observation];
 out;
 </textarea><div class="exercise-fail-msg"><div class="message"> <span class="warning">That doesn't seem right!</span> <span class="hint">La consulta alrededor se basa en el conjunto de resultados (en este caso, el resultado de la consulta anterior)</span></div></div><div class="exercise-action-bar"><div class="exercise-action-bar-inner winner-bar"><div> <span>Awesome Work!</span> <a href="//maptimebogota.github.io/learnoverpass/es/exercises/intro/9/" class="exercise-action-next">Go to Next Lesson</a></div></div><div class="exercise-action-bar-inner"><div> <a href="#" class="exercise-action-run">Run Query</a> <a href="#" class="exercise-action-reset">Reset Code</a></div></div></div><div class="docs-repl-result output"><iframe src="https://overpass-turbo.eu/map.html?silent" seamless="seamless" frameBorder="0"></iframe><textarea></textarea> <a class="docs-repl-change-output button" href="#">Data</a></div></div><div class="exercise-answer">node(48.5657094, 13.4490548, 48.5662416, 13.4501676)[natural=tree][height=20];
-node(around:150)[amenity=restaurant];
+node(around:450)[amenity=restaurant];
 out;
 
-node(around:100)[amenity=bicycle_parking];
+node(around:120)[amenity=bicycle_parking];
 out;
 
 area[name=Inn];

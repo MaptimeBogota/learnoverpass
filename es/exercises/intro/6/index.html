@@ -9,7 +9,7 @@
 <p>Combina el filtro <code>around</code> con el filtro &ldquo;por etiqueta&rdquo;.</p>
 </div><div class="exercise-lesson-instruction"><div class="exercise-lesson-label"> <span>Instructions</span></div> <ol>
 <li>Nuestro filtro <code>around</code> nos dio un montón de nodos alrededor de nuestro primer nodo, pero no hay restaurantes en él, ¡y hay demasiados nodos!</li>
-<li>Aumenta un poco más nuestra distancia alrededor. Bob dice que ve un restaurante a unos 150 metros de distancia de él, así que sigue adelante y usa eso como filtro de distancia para alrededor.</li>
+<li>Aumenta un poco más nuestra distancia alrededor. Bob dice que ve un restaurante a unos 450 metros de distancia de él, así que sigue adelante y usa eso como filtro de distancia para alrededor.</li>
 <li>Utiliza un filtro por etiqueta para buscar restaurantes. Para ello, puedes utilizar la etiqueta <code>[amenity=restaurant]</code>.</li>
 <li>Recuerda que estamos filtrando nuestros datos desde nuestro conjunto around, así que asegúrate de añadir la etiqueta filter después de nuestro filtro around.</li>
 </ol>
@@ -17,6 +17,6 @@
 node(around:50);
 out;
 </textarea><div class="exercise-fail-msg"><div class="message"> <span class="warning">That doesn't seem right!</span> <span class="hint">Recuerda hacer una nueva consulta. No te limites a añadir <code>around</code> en la primera línea.</span></div></div><div class="exercise-action-bar"><div class="exercise-action-bar-inner winner-bar"><div> <span>Awesome Work!</span> <a href="//maptimebogota.github.io/learnoverpass/es/exercises/intro/7/" class="exercise-action-next">Go to Next Lesson</a></div></div><div class="exercise-action-bar-inner"><div> <a href="#" class="exercise-action-run">Run Query</a> <a href="#" class="exercise-action-reset">Reset Code</a></div></div></div><div class="docs-repl-result output"><iframe src="https://overpass-turbo.eu/map.html?silent" seamless="seamless" frameBorder="0"></iframe><textarea></textarea> <a class="docs-repl-change-output button" href="#">Data</a></div></div><div class="exercise-answer">node(48.5657094, 13.4490548, 48.5662416, 13.4501676)[natural=tree][height=20];
-node(around:150)[amenity=restaurant];
+node(around:450)[amenity=restaurant];
 out;
 </div><div class="exercise-regex"></div></div> <script src="//maptimebogota.github.io/learnoverpass//js/vendor.bundle.js"></script> <script src="//maptimebogota.github.io/learnoverpass//js/exercise.bundle.js"></script> </body></html>

@@ -28,13 +28,13 @@
 <li>Once that’s done, we still need to make sure the node only queries inside the area we defined. To do this, change your bare <code>node</code> statement to <code>node(area)</code>. This tells overpass to only query for nodes inside the area you defined on the area statement!</li>
 </ol>
 </div></div></div><div class="docs-repl exercise-main"><div class="editor-cover"></div> <textarea>node(48.5657094, 13.4490548, 48.5662416, 13.4501676)[natural=tree][height=20];
-node(around:150)[amenity=restaurant];
+node(around:450)[amenity=restaurant];
 out;
 
 area;
 out;
 </textarea><div class="exercise-fail-msg"><div class="message"> <span class="warning">That doesn't seem right!</span> <span class="hint">Remember to use an <code>area</code> query!</span></div></div><div class="exercise-action-bar"><div class="exercise-action-bar-inner winner-bar"><div> <span>Awesome Work!</span> <a href="//maptimebogota.github.io/learnoverpass/en/exercises/intro/8/" class="exercise-action-next">Go to Next Lesson</a></div></div><div class="exercise-action-bar-inner"><div> <a href="#" class="exercise-action-run">Run Query</a> <a href="#" class="exercise-action-reset">Reset Code</a></div></div></div><div class="docs-repl-result output"><iframe src="https://overpass-turbo.eu/map.html?silent" seamless="seamless" frameBorder="0"></iframe><textarea></textarea> <a class="docs-repl-change-output button" href="#">Data</a></div></div><div class="exercise-answer">node(48.5657094, 13.4490548, 48.5662416, 13.4501676)[natural=tree][height=20];
-node(around:150)[amenity=restaurant];
+node(around:450)[amenity=restaurant];
 out;
 
 area[name=Inn];
